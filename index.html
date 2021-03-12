@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/myNorm.css">
+    <link rel="stylesheet" href="./css/vars.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+        <a class="logo" href="#">objects</a>
+        <nav>
+            <ul class="navList">
+                <li><a href="#">создание объектов</a></li>
+                <li><a href="#">свойства и методы</a></li>
+                <li><a href="#">перебор объекта</a></li>
+                <li><a href="#">REST & SPREAD</a></li>
+                <li><a href="#">деструктуризация</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <main>
+        <article class="regster">
+            <div class="container">
+                <h2>Форма регистрации</h2>
+                <form class="form" id="form">
+                    <label for="name">name</label>
+                    <input type="text" name="name" id="name" >
+
+                    <label for="phone">phone</label>
+                    <input type="tel" name="phone" id="phone" required>
+
+                    <label for="email">email</label>
+                    <input type="email" name="email" id="email" required>
+
+                    <label for="pass">your password</label>
+                    <input type="password" name="pass" id="pass" required>
+
+                    <label for="confirmPass">confirm password</label>
+                    <input type="password" name="confirmPass" id="confirmPass" required>
+                    
+                    <button type="submit">submit</button>
+                
+                </form>
+            </div>
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Sandra Hrevtsova 2021</p>
+        </div>
+    </footer>
+
+    <script src="./js/refs.js" type="module"></script>
+    <script src="./js/form.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
+    
+</body>
+</html>

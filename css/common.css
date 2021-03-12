@@ -1,0 +1,53 @@
+html {
+  height: 100%;
+}
+
+header {
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
+}
+main {
+  /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 1 0 auto;
+}
+footer {
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  font-size: 14px;
+  font-family: var(--mainFont);
+
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+
+  color: var(--commonText);
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 80%;
+}
+button[type="submit"] {
+  cursor: pointer;
+  display: block;
+  width: initial;
+
+  padding: 10px 20px;
+  border: none;
+  background-color: black;
+  color: var(--white);
+}
+
+[type="submit"]:hover,
+[type="submit"]:focus {
+  background-color: pink;
+  color: black;
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
