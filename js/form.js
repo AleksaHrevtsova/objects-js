@@ -4,9 +4,9 @@ import refs from "./refs.js";
 const { form } = refs;
 
 // затягиваем функции для обработки данных формы
-// import x from "../index.js";
+import x from "../index.js";
 // деструктуризируем нужные функции из файла, который затянули
-// const { createObject, getInputValues, getNames, createTemplateObject } = x;
+const { createObject, getInputValues, getNames, createTemplateObject } = x;
 
 // объявляем массивы для хранения объектов из данных заполнения формы
 const users = [];
@@ -37,18 +37,20 @@ form.addEventListener("submit", (e) => {
   let confirmPass = e.target.elements.confirmPass.value;
   //   console.log(confirmPass);
   //   ========================================
-  //   const user = createObject(name, phone, email, pass, confirmPass); // передаем отдельные аргументы
+  const user = createObject(name, phone, email, pass, confirmPass); // передаем отдельные аргументы
+  // console.log(user);
   //   или создадим массив аргументов для передачи в вызов функции
   const values = [name, phone, email, pass, confirmPass];
+  // console.log(values);
   // снова вызываем эту же функцию
   //   const user = createObject(...values); // распыляем через SPREAD массив аргументов values
   users.push(user);
   localStorage.setItem("users", JSON.stringify(users));
 
-  //   getInputValues(name, phone, email, pass, confirmPass);
-  //   getNames(...values); // распыляем через SPREAD массив аргументов values
+  getInputValues(name, phone, email, pass, confirmPass);
+  getNames(...values); // распыляем через SPREAD массив аргументов values
 
-  //   const templateUser = createTemplateObject(keys, values);
+  const templateUser = createTemplateObject(keys, values);
   templateUsers.push(templateUser);
   localStorage.setItem("templateUsers", JSON.stringify(templateUsers));
 
